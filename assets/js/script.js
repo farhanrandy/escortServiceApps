@@ -58,8 +58,8 @@ function handleLogin(event) {
 
 function pilihGender(gender) {
 	if (gender === "Cowok") {
-		window.location.href = "maleProfile.html";
-	} else if (gender === "Cewek") {
 		window.location.href = "femaleProfile.html";
+	} else if (gender === "Cewek") {
+		window.location.href = "maleProfile.html";
 	}
 }
