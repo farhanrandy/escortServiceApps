@@ -97,12 +97,6 @@ let dislikes = [
   "ga suka dengan yang malu-malu meong"
 ];
 
-for (let i = 0; i < profiles.length; i++) {
-  profiles[i].services = getRandomItems(service, 3);
-  profiles[i].dislikes = getRandomItems(dislikes, 2);
-}
-
-
 let currentIndex = 0;
 
 function displayProfile(index) {
@@ -116,8 +110,8 @@ function displayProfile(index) {
   document.getElementById("foto1").src = profile.img1;
   document.getElementById("foto2").src = profile.img2;
   document.getElementById("foto3").src = profile.img3;
-  document.getElementById("dislikes").textContent = profile.dislikes.join(", ");
-  document.getElementById("services").textContent = profile.services.join(", ");
+  document.getElementById("dislikes").textContent = profile.dislikes
+  document.getElementById("services").textContent = profile.services
 }
 
 document.querySelector(".btn-outline-danger").addEventListener("click", () => {
