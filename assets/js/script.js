@@ -63,3 +63,7 @@ function pilihGender(gender) {
 		window.location.href = "maleProfile.html";
 	}
 }
+
+function closePopup() {
+  window.location.href = "alertmessage.html";
+}
