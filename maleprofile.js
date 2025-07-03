@@ -85,18 +85,6 @@ function getRandomItems(array, count) {
   return result;
 }
 
-
-let service = ['chat mesra','semangatin setiap hari','diucapin selamat pagi, siang, sore & malam','sleepcall - tlp mesra sebelum bobo','bisa request pap','bisa request jalan bareng kondangan, acara keluarga','bisa curhat apa aja - privasi aman','bisa cosplay apa aja','bisa dibuatin bekal','video call','main game bareng','nonton bareng','olahraga bareng','joki live code dan graded challenge']
-let dislikes = [
-  "ga suka dicuekin",
-  "gak suka kalau dilarang ini itu tanpa alasan jelas",
-  "split blit",
-  "bau harus wangi pokoknya",
-  "terlalu posesif dan banyak ngatur",
-  "ga suka dibandingin sama org lain",
-  "ga suka dengan yang malu-malu meong"
-];
-
 let currentIndex = 0;
 
 function displayProfile(index) {
