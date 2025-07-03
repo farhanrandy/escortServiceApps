@@ -8,9 +8,9 @@ let profiles = [
     city: "Paris, France",
     age: 29,
     hobby: "Gym & Fashion",
-    img1: ".//assets/img/New Project.jpg",
-    img2: ".//assets/img/New Project (1).jpg",
-    img3: ".//assets/img/New Project (2).jpg"
+    img1: ".//assets/fotocowo/New Project.jpg",
+    img2: ".//assets/fotocowo/New Project (1).jpg",
+    img3: ".//assets/fotocowo/New Project (2).jpg"
   },
   {
     name: "Angga Yunanda",
@@ -21,9 +21,9 @@ let profiles = [
     city: "Jakarta, Indonesia",
     age: 23,
     hobby: "Surfing",
-    img1: ".//assets/img/New Project (3).jpg",
-    img2: ".//assets/img/New Project (4).jpg",
-    img3: ".//assets/img/New Project (5).jpg"
+    img1: ".//assets/fotocowo/New Project (3).jpg",
+    img2: ".//assets/fotocowo/New Project (4).jpg",
+    img3: ".//assets/fotocowo/New Project (5).jpg"
   },
   {
     name: "Julian Jacob",
@@ -34,9 +34,9 @@ let profiles = [
     city: "Shanghai, Chinese",
     age: 26,
     hobby: "Music & watch a concert",
-    img1: ".//assets/img/New Project (6).jpg",
-    img2: ".//assets/img/New Project (7).jpg",
-    img3: ".//assets/img/New Project (8).jpg"
+    img1: ".//assets/fotocowo/New Project (6).jpg",
+    img2: ".//assets/fotocowo/New Project (7).jpg",
+    img3: ".//assets/fotocowo/New Project (8).jpg"
   },
   {
     name: "Verrel Bramasta",
@@ -47,9 +47,9 @@ let profiles = [
     city: "Los Angeles, USA",
     age: 30,
     hobby: "Riding & Touring",
-    img1: ".//assets/img/New Project (9).jpg",
-    img2: ".//assets/img/New Project (10).jpg",
-    img3: ".//assets/img/New Project (11).jpg"
+    img1: ".//assets/fotocowo/New Project (9).jpg",
+    img2: ".//assets/fotocowo/New Project (10).jpg",
+    img3: ".//assets/fotocowo/New Project (11).jpg"
   },
   {
     name: "Darius Sinathrya",
@@ -60,9 +60,9 @@ let profiles = [
     city: "Bangkok, Thailand",
     age: 39,
     hobby: "Golf, Spa & Fine Dining",
-    img1: ".//assets/img/New Project (12).jpg",
-    img2: ".//assets/img/New Project (13).jpg",
-    img3: ".//assets/img/New Project (14).jpg"
+    img1: ".//assets/fotocowo/New Project (12).jpg",
+    img2: ".//assets/fotocowo/New Project (13).jpg",
+    img3: ".//assets/fotocowo/New Project (14).jpg"
   }
 ]
 
