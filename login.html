@@ -1,257 +1,300 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - Escort</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Escort</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-  <!-- CSS Bersih -->
-  <style>
-    :root {
-      --primary: #efcaca;
-      --primary-dark: #db6969;
-      --secondary: #ff8fa3;
-      --background: #fdf8fc;
-      --white: #ffffff;
-      --text: #333333;
-      --text-light: #666666;
-    }
+    <!-- CSS Bersih -->
+    <style>
+      :root {
+        --primary: #efcaca;
+        --primary-dark: #db6969;
+        --secondary: #ff8fa3;
+        --background: #fdf8fc;
+        --white: #ffffff;
+        --text: #333333;
+        --text-light: #666666;
+      }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--background);
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      min-height: 100vh;
-    }
-
-    nav {
-      width: 100%;
-      max-width: 900px;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 600;
-      font-size: 1rem;
-      position: relative;
-    }
-
-    nav a.active::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--primary);
-      border-radius: 1px;
-    }
-
-    .login-wrapper {
-      display: flex;
-      max-width: 900px;
-      width: 100%;
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    .illustration {
-      flex: 1;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: var(--white);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 30px;
-    }
-
-    .illustration img {
-      max-width: 280px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
-    .illustration h2 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: #ffe48a; /* lebih terlihat */
-      text-align: center;
-    }
-
-    .illustration p {
-      font-size: 0.95rem;
-      color: #f0f0f0;
-      text-align: center;
-      max-width: 300px;
-      line-height: 1.5;
-    }
-
-    .login-container {
-      flex: 1;
-      padding: 50px 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .login-container h1 {
-      font-size: 1.8rem;
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .login-container p {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      margin-bottom: 25px;
-    }
-
-    .input-group {
-      margin-bottom: 15px;
-    }
-
-    .input-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 500;
-      color: var(--text);
-      font-size: 0.9rem;
-    }
-
-    .input-field {
-      position: relative;
-    }
-
-    .input-field i {
-      position: absolute;
-      top: 50%;
-      left: 12px;
-      transform: translateY(-50%);
-      color: var(--text-light);
-    }
-
-    .input-field input {
-      width: 100%;
-      padding: 10px 12px 10px 36px;
-      border: 1.5px solid #ddd;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-
-    .input-field input:focus {
-      border-color: var(--primary);
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(127,85,177,0.15);
-    }
-
-    .login-btn {
-      width: 100%;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: var(--white);
-      border: none;
-      padding: 12px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.3s;
-      margin-top: 15px;
-    }
-
-    .login-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(127,85,177,0.3);
-    }
-
-    @media (max-width: 768px) {
-      .login-wrapper {
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--background);
+        margin: 0;
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        min-height: 100vh;
       }
+
+      nav {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 1rem;
+        position: relative;
+      }
+
+      nav a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--primary);
+        border-radius: 1px;
+      }
+
+      .login-wrapper {
+        display: flex;
+        max-width: 900px;
+        width: 100%;
+        background: var(--white);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      }
+
       .illustration {
-        display: none;
+        flex: 1;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-dark)
+        );
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
       }
-    }
-  </style>
-</head>
 
-<body>
+      .illustration img {
+        max-width: 280px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="#services">Services</a></li>
-    </ul>
-  </nav>
+      .illustration h2 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #ffe48a; /* lebih terlihat */
+        text-align: center;
+      }
 
-  <!-- Login Wrapper -->
-  <div class="login-wrapper">
-    <!-- Illustration Section -->
-    <div class="illustration">
-      <img src="./assets/img/pria_dan_wanita_di_sofa.jpg" alt="Couple illustration">
-      <h2>Anti kesepian club! Sewa pacar aja!</h2>
-      <p>Kami mengerti kesepian itu nyata. Sewa pacar bukan hanya tentang punya teman jalan, tapi tentang menemukan seseorang yang bisa membuatmu merasa dihargai, meski hanya sementara.</p>
-    </div>
+      .illustration p {
+        font-size: 0.95rem;
+        color: #f0f0f0;
+        text-align: center;
+        max-width: 300px;
+        line-height: 1.5;
+      }
 
-    <!-- Login Form Section -->
-    <div class="login-container">
-      <h1>Login</h1>
-      <p>Masuk untuk melanjutkan ke akun escort Anda</p>
-      
-      <!-- Form starts here -->
-      <form onsubmit="handleLogin(event)">
-        <div class="input-group">
-          <label for="username">Username</label>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" id="username" value="koksasi" placeholder="Masukkan: koksasi">
+      .login-container {
+        flex: 1;
+        padding: 50px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .login-container h1 {
+        font-size: 1.8rem;
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .login-container p {
+        font-size: 0.95rem;
+        color: var(--text-light);
+        margin-bottom: 25px;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 500;
+        color: var(--text);
+        font-size: 0.9rem;
+      }
+
+      .input-field {
+        position: relative;
+      }
+
+      .input-field i {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        color: var(--text-light);
+      }
+
+      .input-field input {
+        width: 100%;
+        padding: 10px 12px 10px 36px;
+        border: 1.5px solid #ddd;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+
+      .input-field input:focus {
+        border-color: var(--primary);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(127, 85, 177, 0.15);
+      }
+
+      .login-btn {
+        width: 100%;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-dark)
+        );
+        color: var(--white);
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.3s;
+        margin-top: 15px;
+      }
+
+      .login-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(127, 85, 177, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .login-wrapper {
+          flex-direction: column;
+        }
+        .illustration {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </nav>
+
+    <!-- Login Wrapper -->
+    <div class="login-wrapper">
+      <!-- Illustration Section -->
+      <div class="illustration">
+        <img
+          src="./assets/img/pria_dan_wanita_di_sofa.jpg"
+          alt="Couple illustration"
+        />
+        <h2>Anti kesepian club! Sewa pacar aja!</h2>
+        <p>
+          Kami mengerti kesepian itu nyata. Sewa pacar bukan hanya tentang punya
+          teman jalan, tapi tentang menemukan seseorang yang bisa membuatmu
+          merasa dihargai, meski hanya sementara.
+        </p>
+      </div>
+
+      <!-- Login Form Section -->
+      <div class="login-container">
+        <h1>Login</h1>
+        <p>Masuk untuk melanjutkan ke akun escort Anda</p>
+
+        <!-- Form starts here -->
+        <form onsubmit="handleLogin(event)">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                id="username"
+                value="koksasi"
+                placeholder="Masukkan: koksasi"
+              />
+            </div>
           </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="password"
+                value="k0k545i"
+                placeholder="Masukkan: k0k545i"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="login-btn">Login Sekarang</button>
+        </form>
+      </div>
+    </div>
+    <br>
+    
+    <div id="content"></div>
+    <footer id="footer" class="footer light-background"><br>
+      <div class="container">
+        <div class="copyright text-center">
+          <p  style="font-size:11px">
+            © <span id="currentYear">Design</span>
+            by d-Hustler - Kelompok 1
+            <span>B086<br /></span>
+          </p>
         </div>
 
-        <div class="input-group">
-          <label for="password">Password</label>
-          <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" id="password" value="k0k545i" placeholder="Masukkan: k0k545i">
-          </div>
-        </div>
-
-        <button type="submit" class="login-btn">Login Sekarang</button>
-      </form>
-    </div>
-  </div>
-
-  <div id="content"></div>
-  <!-- Script -->
-  <script src="./assets/js/script.js"></script>
-
-</body>
+        <div class="credits"></div>
+      </div>
+    </footer>
+    <!-- Script -->
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
