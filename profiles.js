@@ -1,58 +1,68 @@
 let profiles = [
   {
-    name: "Lana Sinclair",
-    about: "NYC girl with a killer crosscourt and a weakness for good banter. Catch me on the tennis court—or catching feelings over matcha lattes. If you're into playful smirks, spontaneous adventures, and someone who can ace both style and serve… we might just be a match.",
-    birth: "1 May 2002",
+    name: "Davina Karamoy",
+    about: "Cewek gamers dan suka olahraga tennis, siap nemenin kamu sparing atau sekedar nonton pertandingan bareng biar makin seru! Enerjik, ceria, dan gampang bikin nyaman diajak ngobrol setelah main.",
+    birth: "1 Mei 2002",
+    dislikes: "Ga suka cowok yang lemah & noob",
+    services: "Main game bareng, nge-gym, sleepcall, chat mesra sebelum bobo dll",
     city: "New York, USA",
     age: 22,
-    hobby: "tennis",
-    img1: ".//assets/fotocewe/1.jpg",
-    img2: ".//assets/fotocewe/2.jpg",
-    img3: ".//assets/fotocewe/3.jpg"
-  },
-  {
-    name: "Maya Hanami",
-    about: "Tokyo-born, Jakarta-raised—equal parts sweet and spicy. I vibe with late-night karaoke, boba runs, and long drives with the windows down. Swipe right if you’re fluent in sarcasm and compliments.",
-    birth: "12 February 2001",
-    city: "Jakarta, Indonesia",
-    age: 24,
-    hobby: "singing",
-    img1: ".//assets/fotocewe/Maria1.jpg",
-    img2: ".//assets/fotocewe/Maria2.jpg",
-    img3: ".//assets/fotocewe/Maria3.jpg"
-  },
-  {
-    name: "Chloe Martinez",
-    about: "Latina fire with a soft spot for rooftop sunsets and dad jokes. I’m here to steal fries, hearts, and maybe your hoodie. Let’s pretend we met at a museum, not on an app.",
-    birth: "8 July 2000",
-    city: "San Diego, USA",
-    age: 25,
-    hobby: "photography",
+    hobby: "Main game & Tennis",
     img1: ".//assets/fotocewe/Davina1.jpg",
     img2: ".//assets/fotocewe/Davina2.jpg",
     img3: ".//assets/fotocewe/Davina3.jpg"
   },
   {
-    name: "Sasha Beaumont",
-    about: "French soul, global spirit. Fluent in three languages and flirting in all of them. I read tarot, dance barefoot, and believe good energy starts with a great playlist. Are you ready for your next adventure?",
-    birth: "27 September 1999",
+    name: "Maria Theodoree",
+    about: "Model dan cewek pantai siap nemenin kamu hunting sunset, main pasir, atau sekadar healing tepi laut. Santai, fun, dan suka bikin vibes liburan jadi hangat.",
+    birth: "12 Februari 2001",
+    dislikes: "Ga suka cowok yang controlling, ga menjaga penampilan & perhitungan",
+    services: "Travelling, bisa main apa aja di pantai (surfing, banana boat dll), request pap apa aja, bisa request jalan bareng kondangan, acara keluarga dll",
+    city: "San Diego, USA",
+    age: 24,
+    hobby: "Fashion & Hunting sunset/sunrise",
+    img1: ".//assets/fotocewe/Maria1.jpg",
+    img2: ".//assets/fotocewe/Maria2.jpg",
+    img3: ".//assets/fotocewe/Maria3.jpg"
+  },
+  {
+    name: "Erica Carlina",
+    about: "Queen of Party yang suka riding pagi/sore keliling kota sambil cari kopi enak, Enerjik, fun, dan bikin harimu nggak ngebosenin!",
+    birth: "8 Juli 1996",
+    dislikes: "Ga suka cowok suka ngatur, over jealous & mata keranjang",
+    services: "Riding bareng, touring, party sampai pagi, ngecafe dll",
+    city: "Los Angeles, USA",
+    age: 29,
+    hobby: "Touring & Party",
+    img1: ".//assets/fotocewe/New Project (18).jpg",
+    img2: ".//assets/fotocewe/New Project (17).jpg",
+    img3: ".//assets/fotocewe/New Project (16).jpg"
+  },
+  {
+    name: "Ariel Tatum",
+    about: "Aktris dengan aura elegan dan tatapan penuh cerita yang siap nemenin kamu ke kafe buku atau baca bareng di taman sambil ngobrol hal random. Tenang, sabar, dan bisa jadi pendengar yang bikin nyaman.",
+    birth: "27 September 1992",
+    dislikes: "Ga suka cowok kasar & cuek",
+    services: "Bisa jadi pendengar yg baik dengerin curhatmu selama apapun (privasi aman), joki live code & graded challenge dll",
     city: "Paris, France",
-    age: 25,
-    hobby: "dancing",
+    age: 33,
+    hobby: "Baca buku & Acting",
     img1: ".//assets/fotocewe/Ariel1.jpg",
     img2: ".//assets/fotocewe/Ariel2.jpg",
     img3: ".//assets/fotocewe/Ariel3.jpg"
   },
   {
-    name: "Kiara Ellington",
-    about: "Digital daydreamer with a Polaroid heart. I live for midnight playlists, glitter eyeliner, and conversations that spiral into 3AM confessions. If you're into moodboards, moon phases, and messy giggles, let's rewrite our stars.",
-    birth: "30 March 2003",
-    city: "Los Angeles, USA",
+    name: "Kame Hitori",
+    about: "Cewek yang suka cosplay karakter Jepang dan anime, bisa nemenin kamu event cosplay atau sekadar hangout aesthetic bareng. Seru, fun, dan vibes kawaii.",
+    birth: "30 Maret 2003",
+    dislikes: "Ga suka dibandingin sama org lain & melarang tanpa alasan jelas",
+    services: "Bisa cosplay apapun, hangout, buatin bekal, video call dll",
+    city: "Tokyo, Japan",
     age: 22,
-    hobby: "journaling",
-    img1: ".//assets/fotocewe/cp1.jpg",
+    hobby: "Cosplay",
+    img1: ".//assets/fotocewe/cp3.jpg",
     img2: ".//assets/fotocewe/cp2.jpg",
-    img3: ".//assets/fotocewe/cp3.jpg"
+    img3: ".//assets/fotocewe/cp1.jpg"
   }
 ]
 
@@ -77,23 +87,21 @@ function getRandomItems(array, count) {
 }
 
 
-let service = ['chat mesra','semangatin setiap hari','diucapin selamat pagi, siang, sore & malam','sleepcall - tlp mesra sebelum bobo','bisa request pap','bisa request jalan bareng kondangan, acara keluarga','bisa curhat apa aja - privasi aman','bisa cosplay apa aja','bisa dibuatin bekal','video call','main game bareng','nonton bareng','olahraga bareng','joki live code dan graded challenge']
-let dislikes = [
-  "ga suka dicuekin",
-  "gak suka kalau dilarang ini itu tanpa alasan jelas",
-  "split blit",
-  "bau harus wangi pokoknya",
-  "terlalu posesif dan banyak ngatur",
-  "ga suka dibandingin sama org lain",
-  "ga suka dengan yang malu-malu meong"
-];
+// let service = ['chat mesra','semangatin setiap hari','diucapin selamat pagi, siang, sore & malam','sleepcall - tlp mesra sebelum bobo','bisa request pap','bisa request jalan bareng kondangan, acara keluarga','bisa curhat apa aja - privasi aman','bisa cosplay apa aja','bisa dibuatin bekal','video call','main game bareng','nonton bareng','olahraga bareng','joki live code dan graded challenge']
+// let dislikes = [
+//   "ga suka dicuekin",
+//   "gak suka kalau dilarang ini itu tanpa alasan jelas",
+//   "split blit",
+//   "bau harus wangi pokoknya",
+//   "terlalu posesif dan banyak ngatur",
+//   "ga suka dibandingin sama org lain",
+//   "ga suka dengan yang malu-malu meong"
+// ];
 
-for (let i = 0; i < profiles.length; i++) {
-  profiles[i].services = getRandomItems(service, 3);
-  profiles[i].dislikes = getRandomItems(dislikes, 2);
-}
-
-
+// for (let i = 0; i < profiles.length; i++) {
+//   profiles[i].services = getRandomItems(service, 3);
+//   profiles[i].dislikes = getRandomItems(dislikes, 2);
+// }
 
 
 
@@ -110,8 +118,8 @@ function displayProfile(index) {
   document.getElementById("foto1").src = profile.img1;
   document.getElementById("foto2").src = profile.img2;
   document.getElementById("foto3").src = profile.img3;
-  document.getElementById("dislike").textContent = profile.dislikes.join(", ");
-  document.getElementById("service").textContent = profile.services.join(", ");
+  document.getElementById("dislike").textContent = profile.dislikes
+  document.getElementById("service").textContent = profile.services
 
 }
 
