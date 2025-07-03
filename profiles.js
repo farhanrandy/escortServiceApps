@@ -59,9 +59,24 @@ let profiles = [
 
 
 function getRandomItems(array, count) {
-  const shuffled = [...array].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, count);
+  var copied = [];
+  for (var i = 0; i < array.length; i++) {
+    copied.push(array[i]);
+  }
+
+  copied.sort(function() {
+    return Math.random() - 0.5;
+  });
+
+  var result = [];
+  for (var j = 0; j < count; j++) {
+    result.push(copied[j]);
+  }
+
+  return result;
 }
+
+
 let service = ['chat mesra','semangatin setiap hari','diucapin selamat pagi, siang, sore & malam','sleepcall - tlp mesra sebelum bobo','bisa request pap','bisa request jalan bareng kondangan, acara keluarga','bisa curhat apa aja - privasi aman','bisa cosplay apa aja','bisa dibuatin bekal','video call','main game bareng','nonton bareng','olahraga bareng','joki live code dan graded challenge']
 let dislikes = [
   "ga suka dicuekin",
@@ -73,11 +88,11 @@ let dislikes = [
   "ga suka dengan yang malu-malu meong"
 ];
 
-profiles = profiles.map(profile => ({
-...profile,
-services: getRandomItems(service, 3),
-  dislikes: getRandomItems(dislikes, 2)
-}));
+for (let i = 0; i < profiles.length; i++) {
+  profiles[i].services = getRandomItems(service, 3);
+  profiles[i].dislikes = getRandomItems(dislikes, 2);
+}
+
 
 
 
@@ -104,6 +119,39 @@ document.querySelector(".btn-outline-danger").addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % profiles.length;
   displayProfile(currentIndex);
 });
+
+document.querySelector(".btn-outline-success").addEventListener("click", () => {
+  const profile = profiles[currentIndex];
+  const days = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
+  const buttonContainer = document.getElementById("day-buttons");
+
+  // Hapus isi sebelumnya
+  buttonContainer.innerHTML = "";
+
+  // Tambahkan tombol hari
+  for (let i = 0; i < days.length; i++) {
+  let day = days[i];
+  let btn = document.createElement("button");
+  btn.textContent = day;
+  btn.className = "btn btn-outline-danger";
+
+  btn.onclick = function() {
+    alert("Kamu janji keep " + profile.name + " di hari " + day + " 🥰");
+  };
+
+  buttonContainer.appendChild(btn);
+}
+
+
+  // Tampilkan popup
+  document.getElementById("hariPopup").style.display = "flex";
+});
+
+function closePopup() {
+  document.getElementById("hariPopup").style.display = "none";
+}
+
+
 
 // Optional: load the first profile at start
 displayProfile(currentIndex);
