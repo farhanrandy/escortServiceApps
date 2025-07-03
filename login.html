@@ -225,25 +225,33 @@
     <div class="login-container">
       <h1>Login</h1>
       <p>Masuk untuk melanjutkan ke akun escort Anda</p>
-      <form>
+      
+      <!-- Form starts here -->
+      <form onsubmit="handleLogin(event)">
         <div class="input-group">
           <label for="username">Username</label>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" id="username" placeholder="Masukkan: kosasih">
+            <input type="text" id="username" value="koksasi" placeholder="Masukkan: koksasi">
           </div>
         </div>
+
         <div class="input-group">
           <label for="password">Password</label>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" id="password" placeholder="Masukkan: k0545ih">
+            <input type="password" id="password" value="k0k545i" placeholder="Masukkan: k0k545i">
           </div>
         </div>
+
         <button type="submit" class="login-btn">Login Sekarang</button>
       </form>
     </div>
   </div>
+
+  <div id="content"></div>
+  <!-- Script -->
+  <script src="./assets/js/script.js"></script>
 
 </body>
 </html>
